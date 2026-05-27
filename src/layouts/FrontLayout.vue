@@ -108,7 +108,7 @@
         </div>
         <el-divider class="footer-divider" />
         <div class="footer-bottom">
-          <p>青年公寓服务系统 &copy; 2026 | 郑州商学院 计算机与大数据工程学院</p>
+          <p>青年公寓服务系统 &copy; 2026 | All Rights Reserved</p>
           <p>基于 Node.js + Vue3 + MySQL 的前后端分离架构</p>
         </div>
       </div>

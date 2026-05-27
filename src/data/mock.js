@@ -119,7 +119,7 @@ export const rooms = [
 // 用户列表 - 27人
 export const users = [
   // 管理员
-  { id: 1, name: '程烁', phone: '13800138001', idCard: '410***********1234', role: 'admin', gender: '男', age: 22, avatar: '', status: 'active', createTime: '2026-01-01' },
+  { id: 1, name: '系统管理员', phone: '13800138001', idCard: '410***********1234', role: 'admin', gender: '男', age: 22, avatar: '', status: 'active', createTime: '2026-01-01' },
   // 管家
   { id: 2, name: '管家小李', phone: '13800138002', idCard: '410***********2345', role: 'manager', gender: '男', age: 30, avatar: '', status: 'active', createTime: '2026-01-05' },
   // 租客 (25人)
