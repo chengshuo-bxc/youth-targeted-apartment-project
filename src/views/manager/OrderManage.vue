@@ -114,7 +114,7 @@ async function loadOrders() {
 
 const filteredOrders = computed(() => {
   let list = orderList.value
-  if (activeTab !== 'all') list = list.filter(o => o.status === activeTab)
+  if (activeTab.value !== 'all') list = list.filter(o => o.status === activeTab.value)
   if (keyword.value) {
     const kw = keyword.value.toLowerCase()
     list = list.filter(o => (o.userName||'').includes(kw) || (o.roomTitle||'').toLowerCase().includes(kw))
