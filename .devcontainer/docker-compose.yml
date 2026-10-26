@@ -1,0 +1,29 @@
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm
+    command: sleep infinity
+    volumes:
+      - ..:/workspaces/youth-targeted-apartment:cached
+    depends_on:
+      db:
+        condition: service_started
+    environment:
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_USER: apartment
+      DB_PASSWORD: apartment123
+      DB_NAME: youth_apartment
+
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: youth_apartment
+      MYSQL_USER: apartment
+      MYSQL_PASSWORD: apartment123
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:

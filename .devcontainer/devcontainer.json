@@ -1,0 +1,31 @@
+{
+  "name": "青年公寓服务系统",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/youth-targeted-apartment",
+  "runServices": ["db"],
+  "forwardPorts": [5175],
+  "portsAttributes": {
+    "5175": {
+      "label": "青年公寓系统",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
+    }
+  },
+  "containerEnv": {
+    "DB_HOST": "db",
+    "DB_PORT": "3306",
+    "DB_USER": "apartment",
+    "DB_PASSWORD": "apartment123",
+    "DB_NAME": "youth_apartment",
+    "JWT_SECRET": "youth_apartment_secret_key_2026",
+    "JWT_EXPIRES_IN": "24h"
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": ["vue.volar"]
+    }
+  }
+}
